@@ -17,6 +17,6 @@ Route::post('products', [ProductsController::class, 'store'])->name('products.st
 Route::put('products/{product}', [ProductsController::class, 'update'])->name('products.update');
 Route::delete('products/{product}', [ProductsController::class, 'destroy'])->name('products.destroy');
 Route::post('login', [UserAuthenticationController::class, 'login']);
-Route::get('register', [UserAuthenticationController::class, 'register']);
+Route::post('register', [UserAuthenticationController::class, 'register']);
 Route::post('logout', [UserAuthenticationController::class, 'logout'])->middleware('auth:sanctum');
 Route::apiResource('products', ProductsController::class);
